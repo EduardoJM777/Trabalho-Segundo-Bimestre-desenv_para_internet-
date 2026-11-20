@@ -83,7 +83,94 @@ btnCalcTransf.addEventListener("click", function () {
     }
 
 });
+
 // ----------------------------------------------------------------------------------------------------- //
+let inSalario = document.getElementById("salario");
+let inCargo = document.getElementById("cargo");
+let btnCalcAum = document.getElementById("calcAumento");
+let txtSalAntigo = document.getElementById("salAntigo");
+let txtSalNovo = document.getElementById("salNovo");
+let txtDifSalario = document.getElementById("difSalario");
+
+function normalizar(texto) {
+    return texto
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z]/g, "");
+}
+
+inCargo.addEventListener("input", function () {
+    inCargo.value = normalizar(inCargo.value);
+});
+
+const percentuais = {
+    gerente: 1.10,
+    engenheiro: 1.20,
+    tecnico: 1.30
+}
+
+btnCalcAum.addEventListener("click", function () {
+
+    const valSalario = parseFloat(inSalario.value);
+    
+    if (isNaN(valSalario)) {
+        txtSalAntigo.textContent = "Informe um salário válido.";
+        txtSalNovo.textContent = "";
+        txtDifSalario.textContent = "";
+    }
+
+    const fator = percentuais[normalizar(inCargo.value)] ?? 1.40;
+    const salarioNovo = valSalario * fator;
+    const diferenca = salarioNovo - valSalario;
+
+    txtSalAntigo.textContent = "O salário antigo era: R$ " + valSalario.toFixed(2);
+    txtSalNovo.textContent = "O salário novo será de: R$ " + salarioNovo.toFixed(2);
+    txtDifSalario.textContent = "A diferença foi de: R$ " + diferenca.toFixed(2);
+
+});
+
+// ----------------------------------------------------------------------------------------------------- //
+let inSaldoMedio = document.getElementById("saldoMedio");
+let btnCalcCredito = document.getElementById("calcCredito");
+let txtSaldo = document.getElementById("saldo");
+let txtValorCredito = document.getElementById("valorCredito");
+
+btnCalcCredito.addEventListener("click", function () {
+
+    const valSaldoMedio = parseFloat(inSaldoMedio.value);
+
+    if (valSaldoMedio >= 0 && valSaldoMedio <= 200) {
+        txtSaldo.textContent = "O saldo inserido foi de: R$ " + valSaldoMedio;
+        txtValorCredito.textContent = "O valor de crédito aplicável é de: R$ 0";
+    } else if (valSaldoMedio >= 201 && valSaldoMedio <= 400) {
+        txtSaldo.textContent = "O saldo inserido foi de: R$ " + valSaldoMedio;
+        txtValorCredito.textContent = "O valor de crédito aplicável é de: R$ " + (valSaldoMedio * 0.2).toFixed(2);
+    } else if (valSaldoMedio >= 401 && valSaldoMedio <= 600) {
+        txtSaldo.textContent = "O saldo inserido foi de: R$ " + valSaldoMedio;
+        txtValorCredito.textContent = "O valor de crédito aplicável é de: R$ " + (valSaldoMedio * 0.3).toFixed(2);
+    } else {
+        txtSaldo.textContent = "O saldo inserido foi de: R$ " + valSaldoMedio;
+        txtValorCredito.textContent = "O valor de crédito aplicável é de: R$ " + (valSaldoMedio * 0.4).toFixed(2);
+    }
+
+});
+
+// ----------------------------------------------------------------------------------------------------- //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
