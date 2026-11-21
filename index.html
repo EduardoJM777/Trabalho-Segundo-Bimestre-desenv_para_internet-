@@ -176,6 +176,111 @@
 
 
 
+    <h2>Pedidos de lanchonete</h2>
+
+    <table border="1">
+        <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Cachorro quente</td>
+            <td>R$11,00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bauru</td>
+            <td>R$8,50</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Misto quente</td>
+            <td>R$8,00</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hamburguer</td>
+            <td>R$9,00</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Cheeseburguer</td>
+            <td>R$10,00</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Refrigerante</td>
+            <td>R$4,50</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <label for="codProduto">Insira o código do produto:</label>
+    <input 
+        type="number"
+        id="codProduto"
+        name="codProduto"
+        min="1"
+        max="6"
+        placeholder="Ex: 5">
+
+    <br><br>
+
+    <label for="qtdProduto">Insira a quantidade:</label>
+    <input 
+        type="number"
+        id="qtdProduto"
+        name="qtdProduto"
+        min="1"
+        placeholder="Ex: 2">
+
+    <br><br>    
+
+    <button id="calcVal">Calcular valor</button>    
+
+    <p id="valorProdutos"></p>
+
+
+
+    <br><br><br><br><br>
+
+
+
+    <h2>Método de pagamento</h2>
+    <label for="valAserPago">Insira o valor a ser pago:</label>
+    <input 
+        type="number"
+        id="valAserPago"
+        name="valAserPago"
+        min="1"
+        step="0.01"
+        placeholder="Ex: 221.00 ou 221,00">
+
+    <br><br>
+
+    <label for="metodoPagamento">Escolha o método de pagamento:</label>
+    <select 
+        name="metodoPagamento" 
+        id="metodoPagamento">
+        <option value="0" selected disabled>Escolha um método de pagamento</option>
+        <option value="1">Á vista em dinheiro ou cheque (10% de desconto)</option>
+        <option value="2">Á vista no cartão de crédito (15% de desconto)</option>
+        <option value="3">Em 2x sem juros</option>
+        <option value="4">Em 2x com juros de 10%</option>
+    </select>
+
+    <br><br>
+
+    <button id="calcPreco">Calcular preço</button>
+
+    <p id="precoAserPago"></p>
+
+
+
+    <br><br><br><br><br>
 
 
 
@@ -195,6 +300,10 @@
 
 
 
+
+
+
+    
 
 
 </body>

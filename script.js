@@ -157,15 +157,55 @@ btnCalcCredito.addEventListener("click", function () {
 });
 
 // ----------------------------------------------------------------------------------------------------- //
+let inCodProduto = document.getElementById("codProduto");
+let inQtdProduto = document.getElementById("qtdProduto");
+let btnCalcVal = document.getElementById("calcVal");
+let txtValorProdutos = document.getElementById("valorProdutos");
 
+btnCalcVal.addEventListener("click", function () {
 
+    valCodProd = parseInt(inCodProduto.value);
+    valQtdProd = parseInt(inQtdProduto.value);
 
+    if (valCodProd === 1) {
+        txtValorProdutos.textContent = "Valor total do pedido: R$" + (valQtdProd * 11).toFixed(2);
+    } else if (valCodProd === 2) {
+        txtValorProdutos.textContent = "Valor total do pedido: R$" + (valQtdProd * 8.50).toFixed(2);
+    } else if (valCodProd === 3) {
+        txtValorProdutos.textContent = "Valor total do pedido: R$" + (valQtdProd * 8).toFixed(2);
+    } else if (valCodProd === 4) {
+        txtValorProdutos.textContent = "Valor total do pedido: R$" + (valQtdProd * 9).toFixed(2);
+    } else if (valCodProd === 5) {
+        txtValorProdutos.textContent = "Valor total do pedido: R$" + (valQtdProd * 10).toFixed(2);
+    } else {
+        txtValorProdutos.textContent = "Valor total do pedido: R$" + (valQtdProd * 4.50).toFixed(2);
+    }
 
+});
 
+// ----------------------------------------------------------------------------------------------------- //
+let inValAserPago = document.getElementById("valAserPago");
+let selMetodoPag = document.getElementById("metodoPagamento");
+let btnCalcPreco = document.getElementById("calcPreco");
+let txtPrecoAserPago = document.getElementById("precoAserPago");
 
+btnCalcPreco.addEventListener("click", function () {
 
+    valAserPago = parseFloat(inValAserPago.value);
 
+    if (selMetodoPag.value === "1") {
+        txtPrecoAserPago.textContent = "O valor a ser pago é de: R$ " + (valAserPago - (valAserPago * 0.1)).toFixed(2);
+    } else if (selMetodoPag.value === "2") {
+        txtPrecoAserPago.textContent = "O valor a ser pago é de: R$ " + (valAserPago - (valAserPago * 0.15)).toFixed(2);
+    } else if (selMetodoPag.value === "3") {
+        txtPrecoAserPago.textContent = "O valor a ser pago é de: R$" + (valAserPago / 2).toFixed(2) + " em cada parcela.";
+    } else if (selMetodoPag.value === "4") {
+        txtPrecoAserPago.textContent = "O valor a ser pago é de: R$" + ((valAserPago + (valAserPago * 0.1)) / 2).toFixed(2) + " em cada parcela.";
+    } else {
+        txtPrecoAserPago.textContent = "Método de pagamento inválido.";
+    }
 
+});
 
 
 
