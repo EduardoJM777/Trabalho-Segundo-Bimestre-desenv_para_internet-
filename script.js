@@ -207,18 +207,24 @@ btnCalcPreco.addEventListener("click", function () {
 
 });
 
+// ----------------------------------------------------------------------------------------------------- //
+let selNivelProf = document.getElementById("nivelProfe");
+let inQtdAulas = document.getElementById("qtdAulas");
+let btnCalcSalario = document.getElementById("calcSalario");
+let txtResultSalario = document.getElementById("resultSalario");
 
+btnCalcSalario.addEventListener("click", function () {
 
+    valQtdAulas = parseInt(inQtdAulas.value);
 
+    if (selNivelProf.value === "2") {
+        txtResultSalario.textContent = "O salário será de R$ " + (12 * valQtdAulas * 4.5).toFixed(2);
+    } else if (selNivelProf.value === "3") {
+        txtResultSalario.textContent = "O salário será de R$ " + (17 * valQtdAulas * 4.5).toFixed(2);
+    } else if (selNivelProf.value === "4") {
+        txtResultSalario.textContent = "O salário será de R$ " + (25 * valQtdAulas * 4.5).toFixed(2);
+    } else {
+        txtResultSalario.textContent = "Nível de professor inválido."
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+});

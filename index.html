@@ -284,27 +284,37 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <h2>Sistema pagamentos professores</h2>
     
+    <select 
+        name="nivelProfe" 
+        id="nivelProfe">
+        <option value="1" selected disabled>Selecione o nível do professor</option>
+        <option value="2">Nível 1</option>
+        <option value="3">Nível 2</option>
+        <option value="4">Nível 3</option>
+    </select>
 
+    <br><br>
+
+    <label for="qtdAulas">Insira a quantidade de aulas:</label>
+    <input 
+        type="number"
+        id="qtdAulas"
+        name="qtdAulas"
+        min="1"
+        max="100"
+        placeholder="5">
+
+    <br><br>    
+
+    <button id="calcSalario">Calcular salário</button>
+
+    <p id="resultSalario"></p>
+
+
+
+    <br><br><br><br><br>
 
 </body>
 </html>
