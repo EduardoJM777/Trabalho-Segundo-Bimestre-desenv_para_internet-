@@ -314,11 +314,11 @@ function iniciarSalProf() {
 
         let valorPorNivel;
 
-        if (selNivelProf.value === "2") {
+        if (selNivelProf.value === "1") {
             valorPorNivel = 12;
-        } else if (selNivelProf.value === "3") {
+        } else if (selNivelProf.value === "2") {
             valorPorNivel = 17;
-        } else if (selNivelProf.value === "4") {
+        } else if (selNivelProf.value === "3") {
             valorPorNivel = 25;
         } else {
             txtResultSalario.textContent = "Nível de professor inválido.";

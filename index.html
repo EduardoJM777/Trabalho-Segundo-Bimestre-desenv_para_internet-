@@ -9,316 +9,346 @@
 </head>
 <body>
 
-    <h2>Identificador de Triângulos</h2>
-    <label for="compA">Digite o primeiro comprimento:</label>
-    <input 
-        type="number"
-        id="compA"
-        name="compA"
-        min="1"
-        step="0.01"
-        placeholder="Ex: 12">
-
-    <br><br>
-
-    <label for="compB">Digite o segundo comprimento:</label>
-    <input 
-        type="number"
-        id="compB"
-        name="compB"
-        min="1"
-        step="0.01"
-        placeholder="Ex: 15">
-
-    <br><br>    
-
-    <label for="compC">Digite o terceiro comprimento:</label>
-    <input 
-        type="number" 
-        name="compC"
-        id="compC"
-        min="1"
-        step="0.01"
-        placeholder="Ex: 18">
-
-    <br><br>    
-
-    <button id="btnVerif">Verificar</button>
-
-    <p id="isTriang"></p>
-
-    <p id="tipoTriangulo"></p>
-
-
-
-    <br><br><br><br><br>
-
-
-
-    <h2>Calculadora IMC</h2>
-    <label for="peso">Insira seu peso (em kg):</label>
-    <input 
-        type="number"
-        id="peso"
-        name="peso"
-        min="1"
-        step="0.01"
-        placeholder="Ex: 60">
-
-    <br><br>
-    
-    <label for="altura">Insira sua altura (em m)</label>
-    <input 
-        type="number"
-        id="altura"
-        name="altura"
-        min="0"
-        step="0.01"
-        placeholder="Ex: 1.70 ou 1,70">
-
-    <br><br>
-
-    <button id="calcIMC">Calcular IMC</button>
-
-    <p id="resultIMC"></p>
-
-    <p id="classifIMC"></p>
-
-
-
-    <br><br><br><br><br>    
-
-
-
-    <h2>Calculadora de Transferência de Veículo</h2>
-    <label for="anoFab">Insira o ano de fabricação do veículo:</label>
-    <input 
-        type="number" 
-        name="anoFab" 
-        id="anoFab"
-        min="1900"
-        placeholder="Ex: 2002">
-
-    <br><br>
-
-    <label for="valorTabela">Insira o valor de tabela do veículo:</label>
-    <input 
-        type="number"
-        id="valorTabela"
-        name="valorTabela"
-        min="1"
-        placeholder="Ex: 8271,87 ou 8271.87">
-
-    <br><br>
-
-    <button id="calcTransf">Calcular valor da transferência</button>
-
-    <p id="taxaCobrada"></p>
-
-    <p id="valorCobrado"></p>
-
-
-
-    <br><br><br><br><br> 
-
-
-
-    <h2>Calculadora de salário</h2>
-    <label for="salario">Insira o salário:</label>
-    <input 
-        type="number"
-        id="salario"
-        name="salario"
-        min="1000"
-        step="0.01"
-        placeholder="Ex: 2500.00 ou 2500,00">
-
-    <br><br>
-
-    <label for="cargo">Insira seu cargo:</label>    
-    <input 
-        type="text"
-        id="cargo"
-        name="cargo"
-        placeholder="Ex: Gerente">
-
-    <br><br>
-
-    <button id="calcAumento">Calcular aumento</button>
-
-    <p id="salAntigo"></p>
-
-    <p id="salNovo"></p>
-
-    <p id="difSalario"></p>
-
-
-
-    <br><br><br><br><br>
-
-
-
-    <h2>Calculadora de crédito bancário</h2>
-    <label for="saldoMedio">Insira seu saldo médio:</label>
-    <input 
-        type="number"
-        id="saldoMedio"
-        name="saldoMedio"
-        min="0"
-        step="0.01"
-        placeholder="Ex: 324">
-
-    <button id="calcCredito">Calcular crédito</button>
-
-    <p id="saldo"></p>
-
-    <p id="valorCredito"></p>
-
-
-
-    <br><br><br><br><br>
-
-
-
-    <h2>Pedidos de lanchonete</h2>
-
-    <table border="1">
-        <tr>
-            <th>Código</th>
-            <th>Produto</th>
-            <th>Preço</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Cachorro quente</td>
-            <td>R$11,00</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Bauru</td>
-            <td>R$8,50</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Misto quente</td>
-            <td>R$8,00</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Hamburguer</td>
-            <td>R$9,00</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Cheeseburguer</td>
-            <td>R$10,00</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Refrigerante</td>
-            <td>R$4,50</td>
-        </tr>
-    </table>
-
-    <br>
-
-    <label for="codProduto">Insira o código do produto:</label>
-    <input 
-        type="number"
-        id="codProduto"
-        name="codProduto"
-        min="1"
-        max="6"
-        placeholder="Ex: 5">
-
-    <br><br>
-
-    <label for="qtdProduto">Insira a quantidade:</label>
-    <input 
-        type="number"
-        id="qtdProduto"
-        name="qtdProduto"
-        min="1"
-        placeholder="Ex: 2">
-
-    <br><br>    
-
-    <button id="calcVal">Calcular valor</button>    
-
-    <p id="valorProdutos"></p>
-
-
-
-    <br><br><br><br><br>
-
-
-
-    <h2>Método de pagamento</h2>
-    <label for="valAserPago">Insira o valor a ser pago:</label>
-    <input 
-        type="number"
-        id="valAserPago"
-        name="valAserPago"
-        min="1"
-        step="0.01"
-        placeholder="Ex: 221.00 ou 221,00">
-
-    <br><br>
-
-    <label for="metodoPagamento">Escolha o método de pagamento:</label>
-    <select 
-        name="metodoPagamento" 
-        id="metodoPagamento">
-        <option value="0" selected disabled>Escolha um método de pagamento</option>
-        <option value="1">Á vista em dinheiro ou cheque (10% de desconto)</option>
-        <option value="2">Á vista no cartão de crédito (15% de desconto)</option>
-        <option value="3">Em 2x sem juros</option>
-        <option value="4">Em 2x com juros de 10%</option>
-    </select>
-
-    <br><br>
-
-    <button id="calcPreco">Calcular preço</button>
-
-    <p id="precoAserPago"></p>
-
-
-
-    <br><br><br><br><br>
-
-
-
-    <h2>Sistema pagamentos professores</h2>
-    
-    <select 
-        name="nivelProfe" 
-        id="nivelProfe">
-        <option value="1" selected disabled>Selecione o nível do professor</option>
-        <option value="2">Nível 1</option>
-        <option value="3">Nível 2</option>
-        <option value="4">Nível 3</option>
-    </select>
-
-    <br><br>
-
-    <label for="qtdAulas">Insira a quantidade de aulas:</label>
-    <input 
-        type="number"
-        id="qtdAulas"
-        name="qtdAulas"
-        min="1"
-        max="100"
-        placeholder="5">
-
-    <br><br>    
-
-    <button id="calcSalario">Calcular salário</button>
-
-    <p id="resultSalario"></p>
-
-
-
-    <br><br><br><br><br>
+    <main>
+
+        <section>
+            <h2>Identificador de Triângulos</h2>
+
+            <div class="campo">
+                <label for="compA">Digite o primeiro comprimento:</label>
+                <input 
+                    type="number"
+                    id="compA"
+                    name="compA"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 12">
+            </div>    
+
+            <div class="campo">
+                <label for="compB">Digite o segundo comprimento:</label>
+                <input 
+                    type="number"
+                    id="compB"
+                    name="compB"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 15">
+            </div>  
+
+            <div class="campo">
+                <label for="compC">Digite o terceiro comprimento:</label>
+                <input 
+                    type="number" 
+                    name="compC"
+                    id="compC"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 18">
+            </div> 
+
+            <button 
+                id="btnVerif"
+                type="button">Verificar</button>
+
+            <div aria-live="polite">
+                <p id="isTriang"></p>
+
+                <p id="tipoTriangulo"></p>
+            </div>
+            
+        </section>
+
+        <section>
+            <h2>Calculadora IMC</h2>
+
+            <div class="campo">
+                <label for="peso">Insira seu peso (em kg):</label>
+                <input 
+                    type="number"
+                    id="peso"
+                    name="peso"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 60">
+            </div>
+            
+            <div class="campo">
+                <label for="altura">Insira sua altura (em m):</label>
+                <input 
+                    type="number"
+                    id="altura"
+                    name="altura"
+                    min="0.5"
+                    step="0.01"
+                    placeholder="Ex: 1.70 ou 1,70">
+            </div>
+
+            <button 
+                id="calcIMC"
+                type="button">Calcular IMC</button>
+
+            <div aria-live="polite">
+                <p id="resultIMC"></p>
+
+                <p id="classifIMC"></p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Calculadora de Transferência de Veículo</h2>
+
+            <div class="campo">
+                <label for="anoFab">Insira o ano de fabricação do veículo:</label>
+                <input 
+                    type="number" 
+                    name="anoFab" 
+                    id="anoFab"
+                    min="1900"
+                    max="2026"
+                    placeholder="Ex: 2002">
+            </div>
+
+            <div class="campo">
+                <label for="valorTabela">Insira o valor de tabela do veículo:</label>
+                <input 
+                    type="number"
+                    id="valorTabela"
+                    name="valorTabela"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 8271,87 ou 8271.87">
+            </div>
+
+            <button 
+                id="calcTransf"
+                type="button">Calcular valor da transferência</button>
+
+            <div aria-live="polite">
+                <p id="taxaCobrada"></p>
+
+                <p id="valorCobrado"></p>   
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Calculadora de salário</h2>
+
+            <div class="campo">
+                <label for="salario">Insira o salário:</label>
+                <input 
+                    type="number"
+                    id="salario"
+                    name="salario"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 2500.00 ou 2500,00">
+            </div>
+
+            <div class="campo">
+                <label for="cargo">Insira seu cargo:</label>    
+                <input 
+                    type="text"
+                    id="cargo"
+                    name="cargo"
+                    placeholder="Ex: Gerente">
+            </div>
+
+            <button 
+                id="calcAumento"
+                type="button">Calcular aumento</button>
+
+            <div aria-live="polite">
+                <p id="salAntigo"></p>
+
+                <p id="salNovo"></p>
+
+                <p id="difSalario"></p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Calculadora de crédito bancário</h2>
+
+            <div class="campo">
+                <label for="saldoMedio">Insira seu saldo médio:</label>
+                <input 
+                    type="number"
+                    id="saldoMedio"
+                    name="saldoMedio"
+                    min="0"
+                    step="0.01"
+                    placeholder="Ex: 324">
+            </div>
+
+            <button 
+                id="calcCredito"
+                type="button">Calcular crédito</button>
+
+            <div aria-live="polite">
+                <p id="saldo"></p>
+
+                <p id="valorCredito"></p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Pedidos de lanchonete</h2>
+
+            <div>
+                <table>
+                    <caption>Cardápio</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Cachorro quente</td>
+                            <td>R$11,00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bauru</td>
+                            <td>R$8,50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Misto quente</td>
+                            <td>R$8,00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hambúrguer</td>
+                            <td>R$9,00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Cheeseburguer</td>
+                            <td>R$10,00</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Refrigerante</td>
+                            <td>R$4,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="campo">
+                <label for="codProduto">Insira o código do produto:</label>
+                <input 
+                    type="number"
+                    id="codProduto"
+                    name="codProduto"
+                    min="1"
+                    max="6"
+                    placeholder="Ex: 5">
+            </div>
+
+            <div class="campo">
+                <label for="qtdProduto">Insira a quantidade:</label>
+                <input 
+                    type="number"
+                    id="qtdProduto"
+                    name="qtdProduto"
+                    min="1"
+                    placeholder="Ex: 2">
+            </div>
+
+            <button 
+                id="calcVal"
+                type="button">Calcular valor</button>    
+
+            <div aria-live="polite">
+                <p id="valorProdutos"></p>
+            </div>
+            
+        </section>
+
+        <section>
+            <h2>Método de pagamento</h2>
+
+            <div class="campo">
+                <label for="valAserPago">Insira o valor a ser pago:</label>
+                <input 
+                    type="number"
+                    id="valAserPago"
+                    name="valAserPago"
+                    min="1"
+                    step="0.01"
+                    placeholder="Ex: 221.00 ou 221,00">
+            </div>
+
+            <div class="campo">
+                <label for="metodoPagamento">Método de pagamento:</label>
+                <select 
+                    name="metodoPagamento" 
+                    id="metodoPagamento">
+                    <option value="" selected disabled>Escolha um método de pagamento</option>
+                    <option value="1">À vista em dinheiro ou cheque (10% de desconto)</option>
+                    <option value="2">À vista no cartão de crédito (15% de desconto)</option>
+                    <option value="3">Em 2x sem juros</option>
+                    <option value="4">Em 2x com juros de 10%</option>
+                </select>
+            </div>
+
+            <button 
+                id="calcPreco"
+                type="button">Calcular preço</button>
+
+            <div aria-live="polite">
+                <p id="precoAserPago"></p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Sistema pagamentos professores</h2>
+            
+            <div class="campo">
+                <label for="nivelProfe">Nível do professor:</label>
+                <select 
+                    name="nivelProfe" 
+                    id="nivelProfe">
+                    <option value="" selected disabled>Selecione o nível do professor</option>
+                    <option value="1">Nível 1</option>
+                    <option value="2">Nível 2</option>
+                    <option value="3">Nível 3</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="qtdAulas">Insira a quantidade de aulas:</label>
+                <input 
+                    type="number"
+                    id="qtdAulas"
+                    name="qtdAulas"
+                    min="1"
+                    max="100"
+                    placeholder="Ex: 5">
+            </div>
+
+            <button 
+                id="calcSalario"
+                type="button">Calcular salário</button>
+
+            <div aria-live="polite">
+                <p id="resultSalario"></p>
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 </html>

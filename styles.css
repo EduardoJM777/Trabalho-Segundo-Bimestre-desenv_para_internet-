@@ -1,0 +1,229 @@
+:root {
+    color-scheme: light dark;
+
+    --cor-fundo: #f3f5f9;
+    --cor-cartao: #ffffff;
+    --cor-texto: #1f2937;
+    --cor-texto-suave: #6b7280;
+    --cor-borda: #d5dbe5;
+    --cor-destaque: #2563eb;
+    --cor-destaque-escuro: #1d4ed8;
+    --cor-destaque-fundo: #eaf1ff;
+    --cor-erro: #dc2626;
+    --cor-linha-zebra: #f7f9fc;
+
+    --raio: 10px;
+    --sombra: 0 1px 3px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-fundo: #0f172a;
+        --cor-cartao: #1e293b;
+        --cor-texto: #e5e7eb;
+        --cor-texto-suave: #9ca3af;
+        --cor-borda: #334155;
+        --cor-destaque: #60a5fa;
+        --cor-destaque-escuro: #3b82f6;
+        --cor-destaque-fundo: #172554;
+        --cor-erro: #f87171;
+        --cor-linha-zebra: #243247;
+        --sombra: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem 4rem;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+}
+
+main {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 2rem;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+h2 {
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--cor-destaque);
+}
+
+
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font: inherit;
+    color: inherit;
+    background: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: var(--cor-texto-suave);
+    opacity: 1;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+/* Só marca como inválido depois que a pessoa digitou algo */
+input:not(:placeholder-shown):invalid {
+    border-color: var(--cor-erro);
+}
+
+
+
+button {
+    margin-top: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--cor-destaque-escuro);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    button,
+    input,
+    select {
+        transition: filter 0.15s, border-color 0.15s, transform 0.05s;
+    }
+}
+
+
+
+
+section p:empty {
+    display: none;
+}
+
+
+section p:not(:empty) {
+    margin: 0.75rem 0 0;
+    padding: 0.6rem 0.9rem;
+    background: var(--cor-destaque-fundo);
+    border-left: 4px solid var(--cor-destaque);
+    border-radius: 0 8px 8px 0;
+}
+
+
+section p:not(:empty) + p:not(:empty) {
+    margin-top: 0.4rem;
+}
+
+
+
+table {
+    width: 100%;
+    margin-bottom: 1.25rem;
+    border-collapse: collapse;
+    border: 1px solid var(--cor-borda);
+}
+
+caption {
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--cor-texto-suave);
+}
+
+th,
+td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+th {
+    background: var(--cor-destaque-fundo);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--cor-linha-zebra);
+}
+
+
+th:last-child,
+td:last-child {
+    text-align: right;
+}
+
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem 0.75rem 3rem;
+    }
+
+    section {
+        padding: 1.1rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
